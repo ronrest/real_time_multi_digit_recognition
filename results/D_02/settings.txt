@@ -1,0 +1,13 @@
+alpha   1e-05
+batch_size   128
+conv_dropout   0.1
+data_size   None
+epochs   5
+fc_dropout   0.1
+image_chanels   1
+image_size   [54, 54]
+input_dir   data
+max_digits   5
+model   d
+output_name   D_02
+valid_size   1024
