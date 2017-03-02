@@ -14,7 +14,21 @@ And for making use of the real-time camera app, you will need a computer with
 a webcam plugged in. 
 
 
-# Data
+# Running the Realtime Multi-Digit Recognition App
+If you just want to try out the app then you can just run the following: 
+
+    python live_predictor.py
+
+This will launch an application that displays the captured video feed from the 
+default webcam on the computer, and overlays the predicted bounding boxes and 
+digits on the screen in real time. 
+
+--------
+
+# Train from Scratch
+If you want to use the existing workflow and existing deep learning architectures included to train a new model from scratch, then you can follow the following steps. 
+
+## 1. Data
 
 The data used for training the models in this project are not included. The data 
 can be downloaded from the following links. 
@@ -38,7 +52,7 @@ This will create several pickle files within the `data` subdirectory that will
 be used by the neural network directly. 
 
 
-# Training
+## 2. Training
 
     python trainer.py -m a -e 10 -b 32 -a 0.001 -o "A_01"
 
@@ -54,7 +68,7 @@ be used by the neural network directly.
 - \* the output name will be used as a place where all snapshots, evaluation files, and visualisations for the model will be stored, in a subdirectory `results/output_name` 
 
 
-# Evaluate on Test Dataset
+## 3. Evaluate on Test Dataset
 
     python tester.py
 
@@ -68,7 +82,7 @@ things in the `imgs` subdirectory:
 
 
 
-# Real Time Prediction
+## 4. Real Time Prediction
 
     python live_predictor.py
 
@@ -76,7 +90,9 @@ Will launch an application that displays the captured video feed from the
 default webcam on the computer, and overlays the predicted bounding boxes and 
 digits on the screen in real time. 
 
+**NOTE:** You may need to change some of the code to get it to load up the checkpoint files for your trained model. By default it is looking for a model called `"A_02"` using the `model_a` architecture, which is the pre-trained model that is included with this repo. 
 
+-------
 
 # Pre-Trained Models
 
