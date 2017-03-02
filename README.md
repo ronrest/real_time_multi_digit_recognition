@@ -1,7 +1,11 @@
 # Software Dependencies
 
 - Python 2.7 
-- Tensorflow 0.12
+- Tensorflow 0.12  
+    - Needs to be this specific version if you do not want to modify any code
+    - Tensorflow made changes to the name of the function that initializes variable tensors in v0.12
+    - Tensorflow made changes yet again to the function that initializes variable tensors in v1.0
+    - So if you run on another version of Tensorflow, you will need to make changes to the code.
 - OpenCV 3.1.0
 - Numpy
 - Matplotlib
