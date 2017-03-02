@@ -32,7 +32,7 @@ The scripts assume that the contents of these tar files are extracted within a s
 To process the data to be used by the neural network, simply run the following 
 in the command line: 
 
-    python create_data_pickles.py
+    python create_data_pickles.py -i "data"
     
 This will create several pickle files within the `data` subdirectory that will 
 be used by the neural network directly. 
